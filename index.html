@@ -29,8 +29,8 @@
                             500: '#627d98',
                             600: '#486581',
                             700: '#334e68',
-                            800: '#243b53', // Primary Navy
-                            900: '#102a43', // Deep Dark Navy
+                            800: '#243b53',
+                            900: '#102a43',
                         },
                         chemistry: {
                             50: '#f0fdfa',
@@ -60,7 +60,7 @@
         }
         .card-hover:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 24px -10px rgba(16, 42, 67, 0.12);
+            box-shadow: 0 12px 24px -10px rgba(16, 42, 67, 0.15);
         }
         .tab-btn.active {
             background-color: #243b53;
@@ -75,11 +75,11 @@
 </head>
 <body class="antialiased font-sans text-slate-800 selection:bg-academic-800 selection:text-white">
 
-    <!-- Navigation Header -->
+    <!-- Header Nav -->
     <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-slate-200/80 transition-all duration-300">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
-                <a href="#home" class="flex items-center gap-3 group">
+                <a href="#about" class="flex items-center gap-3 group">
                     <div class="w-9 h-9 rounded-xl bg-academic-800 text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
                         T
                     </div>
@@ -89,13 +89,12 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Menu -->
                 <div class="hidden md:flex items-center space-x-1 lg:space-x-2">
                     <a href="#about" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-academic-800 hover:bg-slate-100 rounded-lg transition-colors">ประวัติส่วนตัว</a>
                     <a href="#sop" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-academic-800 hover:bg-slate-100 rounded-lg transition-colors">แรงบันดาลใจ</a>
                     <a href="#education" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-academic-800 hover:bg-slate-100 rounded-lg transition-colors">การศึกษา & ผลการเรียน</a>
                     <a href="#skills" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-academic-800 hover:bg-slate-100 rounded-lg transition-colors">ทักษะ & งานอดิเรก</a>
-                    <a href="#portfolio" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-academic-800 hover:bg-slate-100 rounded-lg transition-colors">ผลงาน & จิตอาสา</a>
+                    <a href="#portfolio" class="px-3 py-2 text-sm font-medium text-slate-600 hover:text-academic-800 hover:bg-slate-100 rounded-lg transition-colors">กิจกรรม & ผลงาน</a>
                 </div>
 
                 <div class="hidden lg:block">
@@ -104,108 +103,99 @@
                     </span>
                 </div>
 
-                <!-- Mobile Menu Toggle Button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" type="button" class="text-slate-600 hover:text-academic-800 p-2 rounded-lg focus:outline-none" aria-label="Toggle Menu">
+                    <button id="mobile-menu-btn" type="button" class="text-slate-600 hover:text-academic-800 p-2 rounded-lg" aria-label="Toggle Menu">
                         <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
                     </button>
                 </div>
             </div>
         </div>
 
-        <!-- Mobile Menu Drawer -->
         <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-xl">
             <div class="px-4 pt-3 pb-6 space-y-2">
                 <a href="#about" class="mobile-link block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-slate-100">ประวัติส่วนตัว</a>
                 <a href="#sop" class="mobile-link block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-slate-100">แรงบันดาลใจ (SOP)</a>
                 <a href="#education" class="mobile-link block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-slate-100">การศึกษา & ผลการเรียน</a>
                 <a href="#skills" class="mobile-link block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-slate-100">ทักษะ & งานอดิเรก</a>
-                <a href="#portfolio" class="mobile-link block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-slate-100">ผลงาน & จิตอาสา</a>
+                <a href="#portfolio" class="mobile-link block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-slate-100">กิจกรรม & ผลงาน</a>
             </div>
         </div>
     </nav>
 
-    <!-- SECTION 1: HERO & PERSONAL PROFILE -->
+    <!-- SECTION 1: PROFILE -->
     <section id="about" class="pt-28 pb-16 md:pt-36 md:pb-24 px-4 bg-gradient-to-b from-slate-100 via-white to-slate-50 relative overflow-hidden">
-        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-academic-100/50 blur-3xl -z-10"></div>
-        <div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-chemistry-100/40 blur-3xl -z-10"></div>
-
         <div class="max-w-5xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
                 
-                <!-- Avatar / Photo -->
                 <div class="md:col-span-5 lg:col-span-4 flex flex-col items-center">
                     <div class="relative group">
-                        <div class="w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-200 card-hover relative">
-                            <img src="https://placehold.co/500x650/102a43/ffffff?text=นายทินกร+พันแสน" 
-                                 alt="นายทินกร พันแสน (สตางค์)" 
-                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="w-56 h-72 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-academic-900 flex items-center justify-center text-white card-hover relative p-6 text-center">
+                            <div>
+                                <i class="fa-solid fa-user-graduate text-6xl text-chemistry-500 mb-3"></i>
+                                <h3 class="font-bold text-lg">นายทินกร พันแสน</h3>
+                                <p class="text-xs text-slate-300 mt-1">โนนสูงพิทยาคาร</p>
+                            </div>
                         </div>
                         <div class="absolute -bottom-4 right-2 bg-academic-800 text-white px-4 py-2 rounded-xl text-xs font-semibold shadow-lg flex items-center gap-2 border border-academic-700">
-                            <i class="fa-solid fa-graduation-cap text-chemistry-500"></i> โควตาแนะแนว มมส.
+                            <i class="fa-solid fa-graduation-cap text-chemistry-500"></i> โควตาแนะแนว มมส.[cite: 1]
                         </div>
                     </div>
                 </div>
 
-                <!-- Personal Information -->
                 <div class="md:col-span-7 lg:col-span-8 text-center md:text-left space-y-4">
                     <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-academic-100 text-academic-800 text-xs font-semibold tracking-wide">
-                        <i class="fa-solid fa-award"></i> แฟ้มสะสมผลงาน (PORTFOLIO)
+                        <i class="fa-solid fa-award"></i> แฟ้มสะสมผลงาน (PORTFOLIO)[cite: 1]
                     </div>
 
                     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-academic-900 tracking-tight">
-                        นายทินกร พันแสน <span class="text-academic-600 font-normal text-2xl sm:text-3xl">(สตางค์)</span>
+                        นายทินกร พันแสน <span class="text-academic-600 font-normal text-2xl sm:text-3xl">(สตางค์)</span>[cite: 1]
                     </h1>
                     
                     <p class="text-base sm:text-lg text-slate-600 font-medium">
-                        วันเกิด: 16 กรกฎาคม 2551 (อายุ 17 ปี)
+                        วันเกิด: 16 กรกฎาคม 2551 (อายุ 17 ปี)[cite: 1]
                     </p>
 
-                    <!-- Target Course Banner -->
                     <div class="p-4 rounded-2xl bg-white border border-slate-200/80 shadow-sm flex items-start gap-3 text-left">
                         <div class="p-2.5 bg-chemistry-50 text-chemistry-600 rounded-xl mt-0.5">
                             <i class="fa-solid fa-atom text-xl"></i>
                         </div>
                         <div>
-                            <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">สมัครเข้าศึกษา</span>
-                            <h2 class="text-base font-bold text-academic-900">คณะวิทยาศาสตร์ สาขาวิชาเคมี</h2>
-                            <p class="text-xs text-slate-500">มหาวิทยาลัยมหาสารคาม (Mahasarakham University)</p>
+                            <span class="text-xs font-bold uppercase text-slate-400 tracking-wider">เป้าหมายการศึกษา</span>
+                            <h2 class="text-base font-bold text-academic-900">คณะวิทยาศาสตร์ สาขาวิชาเคมี[cite: 1]</h2>
+                            <p class="text-xs text-slate-500">มหาวิทยาลัยมหาสารคาม (Mahasarakham University)[cite: 1]</p>
                         </div>
                     </div>
 
-                    <!-- Motto Card -->
                     <div class="inline-block w-full md:w-auto p-4 rounded-xl bg-slate-900 text-slate-100 shadow-md">
-                        <div class="text-xs text-slate-400 font-mono mb-1"><i class="fa-solid fa-quote-left mr-1"></i> คติประจำใจ</div>
-                        <div class="text-lg font-bold tracking-wide text-amber-400">"Job's not finished"</div>
+                        <div class="text-xs text-slate-400 font-mono mb-1"><i class="fa-solid fa-quote-left mr-1"></i> คติประจำใจ[cite: 1]</div>
+                        <div class="text-lg font-bold tracking-wide text-amber-400">"Job's not finished"[cite: 1]</div>
                     </div>
 
-                    <!-- Contact Details -->
                     <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-3 text-sm">
                         <a href="mailto:monstang0123@gmail.com" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-academic-800 transition-colors shadow-sm">
                             <i class="fa-regular fa-envelope text-red-500"></i>
-                            <span class="font-medium">monstang0123@gmail.com</span>
+                            <span class="font-medium">monstang0123@gmail.com</span>[cite: 1]
                         </a>
                         <a href="https://facebook.com" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-blue-600 transition-colors shadow-sm">
                             <i class="fa-brands fa-facebook text-blue-600"></i>
-                            <span class="font-medium">Thinakon Phansean</span>
+                            <span class="font-medium">Thinakon Phansean</span>[cite: 1]
                         </a>
                         <a href="https://instagram.com" target="_blank" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-pink-600 transition-colors shadow-sm">
                             <i class="fa-brands fa-instagram text-pink-500"></i>
-                            <span class="font-medium">athingkxh</span>
+                            <span class="font-medium">athingkxh</span>[cite: 1]
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: STATEMENT OF PURPOSE -->
+    <!-- SECTION 2: SOP -->
     <section id="sop" class="py-16 md:py-24 px-4 bg-academic-900 text-white relative">
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-10">
                 <span class="px-3 py-1 bg-academic-800 text-academic-200 rounded-full text-xs font-semibold uppercase tracking-widest border border-academic-700">
-                    Statement of Purpose
+                    Statement of Purpose[cite: 2]
                 </span>
                 <h2 class="text-2xl sm:text-3xl font-bold mt-3 text-white">แรงบันดาลใจในการศึกษาต่อทางด้านเคมี</h2>
                 <div class="w-12 h-1 bg-chemistry-500 mx-auto mt-3 rounded-full"></div>
@@ -214,190 +204,355 @@
             <div class="bg-academic-800/80 border border-academic-700/60 rounded-3xl p-6 sm:p-10 shadow-2xl space-y-6 leading-relaxed font-light text-slate-200">
                 <p class="text-base sm:text-lg">
                     <span class="text-3xl font-serif text-chemistry-500 float-left mr-2 leading-none">“</span>
-                    ตั้งแต่ยังเด็ก ผมมีความสนใจใน <strong class="text-white font-medium">วิทยาศาสตร์ โดยเฉพาะเคมี</strong> เพราะมันคือศาสตร์ที่ช่วยอธิบายปรากฏการณ์รอบตัวที่ดูธรรมดา ให้กลายเป็นสิ่งที่น่าพิศวง ทุกครั้งที่ผมได้เห็นการเปลี่ยนแปลงเล็ก ๆ เช่น การละลายของน้ำตาลในน้ำ การเกิดสนิมบนเหล็ก หรือแสงสีจากการเผาไหม้ ผมมักจะตั้งคำถามว่า <em class="text-amber-300 font-normal">“สิ่งเหล่านี้เกิดขึ้นได้อย่างไร?”</em> ความอยากรู้เช่นนี้ไม่เคยลดลงเลย แต่กลับทวีความเข้มข้นมากขึ้นตามกาลเวลา
+                    ตั้งแต่ยังเด็ก ผมมีความสนใจใน <strong class="text-white font-medium">วิทยาศาสตร์ โดยเฉพาะเคมี</strong>[cite: 2] เพราะมันคือศาสตร์ที่ช่วยอธิบายปรากฏการณ์รอบตัวที่ดูธรรมดา ให้กลายเป็นสิ่งที่น่าพิศวง[cite: 2] ทุกครั้งที่ผมได้เห็นการเปลี่ยนแปลงเล็ก ๆ เช่น การละลายของน้ำตาลในน้ำ การเกิดสนิมบนเหล็ก หรือแสงสีจากการเผาไหม้[cite: 2] ผมมักจะตั้งคำถามว่า <em class="text-amber-300 font-normal">“สิ่งเหล่านี้เกิดขึ้นได้อย่างไร?”</em>[cite: 2]
                 </p>
 
                 <p class="text-base sm:text-lg">
-                    สำหรับผม เคมีไม่ได้เป็นเพียงวิชาในห้องเรียนที่เต็มไปด้วยสูตรและสมการ แต่คือ <strong class="text-white font-medium">กระบวนการคิดที่ฝึกให้เราเป็นคนรอบคอบ เป็นระบบ และกล้าที่จะทดลองเพื่อค้นหาความจริง</strong> เคมีทำให้ผมมองโลกแตกต่างออกไป เพราะทุกสิ่งรอบตัวล้วนสัมพันธ์กับหลักการทางเคมีทั้งสิ้น ไม่ว่าจะเป็นอาหารที่เรารับประทาน วัสดุที่เราใช้ หรือพลังงานที่ขับเคลื่อนชีวิตประจำวัน
+                    สำหรับผม เคมีไม่ได้เป็นเพียงวิชาในห้องเรียนที่เต็มไปด้วยสูตรและสมการ[cite: 2] แต่คือ <strong class="text-white font-medium">กระบวนการคิดที่ฝึกให้เราเป็นคนรอบคอบ เป็นระบบ และกล้าที่จะทดลองเพื่อค้นหาความจริง</strong>[cite: 2] เคมีทำให้ผมมองโลกแตกต่างออกไป[cite: 2] เพราะทุกสิ่งรอบตัวล้วนสัมพันธ์กับหลักการทางเคมีทั้งสิ้น[cite: 2]
                 </p>
 
                 <p class="text-base sm:text-lg">
-                    ด้วยแนวคิดนี้ ผมจึงมีแรงบันดาลใจอยากเข้าศึกษาต่อใน <strong class="text-chemistry-100 font-semibold">คณะวิทยาศาสตร์ สาขาวิชาเคมี มหาวิทยาลัยมหาสารคาม</strong> เพื่อพัฒนาความเข้าใจในศาสตร์นี้อย่างลึกซึ้งและเป็นระบบ ผมเชื่อว่าความรักในวิทยาศาสตร์ ความมุ่งมั่นในการเรียนรู้ และความตั้งใจของผม จะช่วยให้ผมเติบโตเป็นนักวิทยาศาสตร์ที่ไม่เพียงแค่ค้นพบคำตอบใหม่ ๆ ให้กับตัวเอง แต่ยังสามารถนำความรู้นั้นไปสร้างประโยชน์และแรงบันดาลใจให้แก่สังคมได้
+                    ด้วยแนวคิดนี้ ผมจึงมีความตั้งใจอยากเข้าศึกษาต่อใน <strong class="text-chemistry-100 font-semibold">คณะวิทยาศาสตร์ สาขาวิชาเคมี มหาวิทยาลัยมหาสารคาม</strong>[cite: 2] เพื่อพัฒนาความเข้าใจในศาสตร์นี้อย่างลึกซึ้งและเป็นระบบ[cite: 2] นำความรู้ไปสร้างประโยชน์และแรงบันดาลใจให้แก่สังคมต่อไป[cite: 2]
                 </p>
 
                 <div class="pt-4 border-t border-academic-700/80 flex justify-between items-center text-xs sm:text-sm text-slate-400">
-                    <span><i class="fa-solid fa-pen-nib text-chemistry-500 mr-1"></i> เขียนโดย นายทินกร พันแสน</span>
+                    <span><i class="fa-solid fa-pen-nib text-chemistry-500 mr-1"></i> เขียนโดย นายทินกร พันแสน</span>[cite: 1]
                     <span class="font-mono text-academic-300">#ChemistryMSU</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 3: ACADEMIC & EDUCATION -->
+    <!-- SECTION 3: ACADEMIC -->
     <section id="education" class="py-16 md:py-24 px-4 bg-slate-50">
         <div class="max-w-5xl mx-auto">
-            
             <div class="text-center mb-12">
                 <span class="text-xs font-bold text-academic-600 uppercase tracking-widest bg-academic-100 px-3 py-1 rounded-full">Academic Background</span>
                 <h2 class="text-2xl sm:text-3xl font-bold text-academic-900 mt-2">ประวัติการศึกษา & ผลการเรียน</h2>
                 <div class="w-12 h-1 bg-academic-800 mx-auto mt-3 rounded-full"></div>
             </div>
 
-            <!-- Overall GPAX Summary Banner -->
             <div class="bg-gradient-to-r from-academic-800 to-academic-900 rounded-3xl p-6 sm:p-8 text-white shadow-xl mb-12 flex flex-col md:flex-row items-center justify-between gap-6 border border-academic-700">
                 <div class="space-y-2 text-center md:text-left">
                     <div class="inline-flex items-center gap-2 bg-academic-700/50 px-3 py-1 rounded-lg text-xs font-mono text-academic-200">
                         <i class="fa-solid fa-graduation-cap"></i> ระดับมัธยมศึกษาตอนปลาย
                     </div>
-                    <h3 class="text-2xl font-bold">โรงเรียนโนนสูงพิทยาคาร</h3>
-                    <p class="text-slate-300 text-sm">ตำบลโนนสูง อำเภอเมืองอุดรธานี จังหวัดอุดรธานี</p>
+                    <h3 class="text-2xl font-bold">โรงเรียนโนนสูงพิทยาคาร</h3>[cite: 1]
+                    <p class="text-slate-300 text-sm">ตำบลโนนสูง อำเภอเมืองอุดรธานี จังหวัดอุดรธานี</p>[cite: 1]
                 </div>
 
                 <div class="flex items-center gap-4 bg-white/10 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/10">
                     <div class="text-center">
                         <span class="text-xs uppercase text-slate-300 font-medium block">ผลการเรียนเฉลี่ยรวม</span>
-                        <span class="text-4xl sm:text-5xl font-black text-amber-400 font-mono tracking-tight">3.77</span>
-                        <span class="text-xs text-slate-300 block mt-0.5">GPAX (62.0 หน่วยกิต)</span>
+                        <span class="text-4xl sm:text-5xl font-black text-amber-400 font-mono tracking-tight">3.77</span>[cite: 1]
+                        <span class="text-xs text-slate-300 block mt-0.5">GPAX (62.0 หน่วยกิต)</span>[cite: 1]
                     </div>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                
-                <!-- Education Timeline -->
                 <div class="lg:col-span-5 space-y-6">
                     <h3 class="text-lg font-bold text-academic-900 flex items-center gap-2">
                         <i class="fa-solid fa-clock-rotate-left text-academic-600"></i> เส้นทางการศึกษา
                     </h3>
 
                     <div class="relative pl-6 border-l-2 border-academic-200 space-y-8">
-                        <!-- High School -->
                         <div class="relative group">
                             <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-academic-800 border-4 border-white shadow"></div>
                             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm card-hover">
-                                <span class="text-xs font-semibold text-academic-600">มัธยมศึกษาตอนปลาย</span>
-                                <h4 class="font-bold text-slate-800 text-base mt-1">โรงเรียนโนนสูงพิทยาคาร</h4>
-                                <p class="text-xs text-slate-500">อ.เมืองอุดรธานี จ.อุดรธานี</p>
+                                <span class="text-xs font-semibold text-academic-600">มัธยมศึกษาตอนปลาย</span>[cite: 1]
+                                <h4 class="font-bold text-slate-800 text-base mt-1">โรงเรียนโนนสูงพิทยาคาร</h4>[cite: 1]
+                                <p class="text-xs text-slate-500">อ.เมืองอุดรธานี จ.อุดรธานี</p>[cite: 1]
                             </div>
                         </div>
 
-                        <!-- Junior High School -->
                         <div class="relative group">
                             <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-slate-400 border-4 border-white"></div>
                             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm card-hover">
-                                <span class="text-xs font-semibold text-slate-400">มัธยมศึกษาตอนต้น</span>
-                                <h4 class="font-bold text-slate-800 text-base mt-1">โรงเรียนพันธกิจวิทยา</h4>
-                                <p class="text-xs text-slate-500">อ.เมืองอุดรธานี จ.อุดรธานี</p>
+                                <span class="text-xs font-semibold text-slate-400">มัธยมศึกษาตอนต้น</span>[cite: 1]
+                                <h4 class="font-bold text-slate-800 text-base mt-1">โรงเรียนพันธกิจวิทยา</h4>[cite: 1]
+                                <p class="text-xs text-slate-500">อ.เมืองอุดรธานี จ.อุดรธานี</p>[cite: 1]
                             </div>
                         </div>
 
-                        <!-- Primary School -->
                         <div class="relative group">
                             <div class="absolute -left-[31px] top-0 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></div>
                             <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm card-hover">
-                                <span class="text-xs font-semibold text-slate-400">ประถมศึกษา</span>
-                                <h4 class="font-bold text-slate-800 text-base mt-1">โรงเรียนพันธกิจวิทยา</h4>
-                                <p class="text-xs text-slate-500">อ.เมืองอุดรธานี จ.อุดรธานี</p>
+                                <span class="text-xs font-semibold text-slate-400">ประถมศึกษา</span>[cite: 1]
+                                <h4 class="font-bold text-slate-800 text-base mt-1">โรงเรียนพันธกิจวิทยา</h4>[cite: 1]
+                                <p class="text-xs text-slate-500">อ.เมืองอุดรธานี จ.อุดรธานี</p>[cite: 1]
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Learning Group Breakdown -->
                 <div class="lg:col-span-7 space-y-4">
                     <h3 class="text-lg font-bold text-academic-900 flex items-center gap-2">
                         <i class="fa-solid fa-chart-pie text-academic-600"></i> ผลการเรียนแยกตามกลุ่มสาระฯ
                     </h3>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        
-                        <!-- Science & Tech -->
                         <div class="p-4 rounded-2xl bg-white border-2 border-academic-800 shadow-sm flex justify-between items-center col-span-1 sm:col-span-2">
                             <div class="flex items-center gap-3">
                                 <div class="w-10 h-10 rounded-xl bg-academic-800 text-white flex items-center justify-center">
                                     <i class="fa-solid fa-atom text-lg"></i>
                                 </div>
                                 <div>
-                                    <h4 class="font-bold text-slate-800 text-sm">วิทยาศาสตร์และเทคโนโลยี</h4>
-                                    <span class="text-xs text-slate-500">24.0 หน่วยกิต</span>
+                                    <h4 class="font-bold text-slate-800 text-sm">วิทยาศาสตร์และเทคโนโลยี</h4>[cite: 1]
+                                    <span class="text-xs text-slate-500">24.0 หน่วยกิต</span>[cite: 1]
                                 </div>
                             </div>
                             <div class="text-right">
-                                <span class="text-2xl font-black text-academic-800 font-mono">3.70</span>
+                                <span class="text-2xl font-black text-academic-800 font-mono">3.70</span>[cite: 1]
                                 <span class="text-xs text-slate-400 block">GPA</span>
                             </div>
                         </div>
 
-                        <!-- Math -->
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">คณิตศาสตร์</h4>
-                                <span class="text-xs text-slate-500">12.0 หน่วยกิต</span>
+                                <h4 class="font-bold text-slate-800 text-sm">คณิตศาสตร์</h4>[cite: 1]
+                                <span class="text-xs text-slate-500">12.0 หน่วยกิต</span>[cite: 1]
                             </div>
-                            <span class="text-xl font-bold text-slate-800 font-mono">3.87</span>
+                            <span class="text-xl font-bold text-slate-800 font-mono">3.87</span>[cite: 1]
                         </div>
 
-                        <!-- Thai Language -->
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">ภาษาไทย</h4>
-                                <span class="text-xs text-slate-500">4.0 หน่วยกิต</span>
+                                <h4 class="font-bold text-slate-800 text-sm">ภาษาไทย</h4>[cite: 1]
+                                <span class="text-xs text-slate-500">4.0 หน่วยกิต</span>[cite: 1]
                             </div>
-                            <span class="text-xl font-bold text-slate-800 font-mono">3.62</span>
+                            <span class="text-xl font-bold text-slate-800 font-mono">3.62</span>[cite: 1]
                         </div>
 
-                        <!-- Foreign Language -->
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">ภาษาต่างประเทศ</h4>
-                                <span class="text-xs text-slate-500">6.0 หน่วยกิต</span>
+                                <h4 class="font-bold text-slate-800 text-sm">ภาษาต่างประเทศ</h4>[cite: 1]
+                                <span class="text-xs text-slate-500">6.0 หน่วยกิต</span>[cite: 1]
                             </div>
-                            <span class="text-xl font-bold text-slate-800 font-mono">3.58</span>
+                            <span class="text-xl font-bold text-slate-800 font-mono">3.58</span>[cite: 1]
                         </div>
 
-                        <!-- Social Studies -->
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">สังคมศึกษา ศาสนาฯ</h4>
-                                <span class="text-xs text-slate-500">7.0 หน่วยกิต</span>
+                                <h4 class="font-bold text-slate-800 text-sm">สังคมศึกษา ศาสนาฯ</h4>[cite: 1]
+                                <span class="text-xs text-slate-500">7.0 หน่วยกิต</span>[cite: 1]
                             </div>
-                            <span class="text-xl font-bold text-slate-800 font-mono">3.92</span>
+                            <span class="text-xl font-bold text-slate-800 font-mono">3.92</span>[cite: 1]
                         </div>
 
-                        <!-- Health & PE -->
                         <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
                             <div>
-                                <h4 class="font-bold text-slate-800 text-sm">สุขศึกษาและพลศึกษา</h4>
-                                <span class="text-xs text-slate-500">2.0 หน่วยกิต</span>
+                                <h4 class="font-bold text-slate-800 text-sm">สุขศึกษาและพลศึกษา</h4>[cite: 1]
+                                <span class="text-xs text-slate-500">2.0 หน่วยกิต</span>[cite: 1]
                             </div>
-                            <span class="text-xl font-bold text-slate-800 font-mono">3.87</span>
+                            <span class="text-xl font-bold text-slate-800 font-mono">3.87</span>[cite: 1]
                         </div>
-
-                        <!-- Arts -->
-                        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
-                            <div>
-                                <h4 class="font-bold text-slate-800 text-sm">ศิลปะ</h4>
-                                <span class="text-xs text-slate-500">2.0 หน่วยกิต</span>
-                            </div>
-                            <span class="text-xl font-bold font-mono text-emerald-600">4.00</span>
-                        </div>
-
-                        <!-- IS -->
-                        <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex justify-between items-center">
-                            <div>
-                                <h4 class="font-bold text-slate-800 text-sm">การศึกษาค้นคว้าอิสระ (IS)</h4>
-                                <span class="text-xs text-slate-500">3.0 หน่วยกิต</span>
-                            </div>
-                            <span class="text-xl font-bold font-mono text-emerald-600">4.00</span>
-                        </div>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- SECTION 4: SKILLS & HOBBIES -->
+    <!-- SECTION 4: SKILLS -->
     <section id="skills" class="py-16 md:py-24 px-4 bg-white border-t border-slate-200">
-        <div class
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-xs font-bold text-academic-600 uppercase tracking-widest bg-academic-100 px-3 py-1 rounded-full">Skills & Soft Skills</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-academic-900 mt-2">ทักษะความสามารถพิเศษ & งานอดิเรก</h2>[cite: 1]
+                <div class="w-12 h-1 bg-academic-800 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 card-hover">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-academic-800 text-white flex items-center justify-center text-xl shadow">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-academic-900">ความสามารถพิเศษ</h3>[cite: 1]
+                            <p class="text-xs text-slate-500">Special Competencies</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-white border border-slate-200/80 flex items-start gap-3">
+                            <i class="fa-solid fa-list-check text-academic-600 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">ทักษะการวางแผนการทำงาน</h4>[cite: 1]
+                                <p class="text-xs text-slate-500 mt-0.5">วางเป้าหมายและลำดับความสำคัญของกิจกรรมอย่างมีประสิทธิภาพ</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white border border-slate-200/80 flex items-start gap-3">
+                            <i class="fa-solid fa-diagram-project text-academic-600 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">ทักษะการจัดการอย่างเป็นระบบ</h4>[cite: 1]
+                                <p class="text-xs text-slate-500 mt-0.5">การประสานงานและบริหารจัดการทรัพยากรอย่างรอบคอบ</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl bg-white border border-slate-200/80 flex items-start gap-3">
+                            <i class="fa-solid fa-chalkboard-user text-academic-600 text-lg mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-slate-800 text-sm">ทักษะการทำสื่อการสอน</h4>[cite: 1]
+                                <p class="text-xs text-slate-500 mt-0.5">สรุปเนื้อหาวิชาการและถ่ายทอดความรู้ให้เข้าใจง่าย</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-8 card-hover">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-academic-800 text-white flex items-center justify-center text-xl shadow">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-academic-900">งานอดิเรก</h3>[cite: 1]
+                            <p class="text-xs text-slate-500">Hobbies & Interests</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white rounded-2xl border border-slate-200/80 text-center space-y-2 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-purple-50 text-purple-600 mx-auto flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-podcast"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">ฟัง Podcast</h4>[cite: 1]
+                        </div>
+
+                        <div class="p-4 bg-white rounded-2xl border border-slate-200/80 text-center space-y-2 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-blue-50 text-blue-600 mx-auto flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-language"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">ท่องศัพท์ English</h4>[cite: 1]
+                        </div>
+
+                        <div class="p-4 bg-white rounded-2xl border border-slate-200/80 text-center space-y-2 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-orange-50 text-orange-600 mx-auto flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-basketball"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">เล่นบาสเกตบอล</h4>[cite: 1]
+                        </div>
+
+                        <div class="p-4 bg-white rounded-2xl border border-slate-200/80 text-center space-y-2 card-hover">
+                            <div class="w-10 h-10 rounded-full bg-emerald-50 text-emerald-600 mx-auto flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-guitar"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-800 text-sm">เล่นกีต้าร์</h4>[cite: 1]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: ACTIVITIES & ACHIEVEMENTS (NO EXTERNAL PLACEHOLDER BUG) -->
+    <section id="portfolio" class="py-16 md:py-24 px-4 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto">
+            
+            <div class="text-center mb-10">
+                <span class="text-xs font-bold text-academic-600 uppercase tracking-widest bg-academic-100 px-3 py-1 rounded-full">Activities & Honors</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-academic-900 mt-2">กิจกรรม และผลงานเกียรติบัตร</h2>
+                <div class="w-12 h-1 bg-academic-800 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button class="tab-btn active px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all" data-filter="all">
+                    ทั้งหมด
+                </button>
+                <button class="tab-btn bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all" data-filter="academic">
+                    <i class="fa-solid fa-flask mr-1"></i> ด้านวิชาการ[cite: 1]
+                </button>
+                <button class="tab-btn bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all" data-filter="activity">
+                    <i class="fa-solid fa-vial mr-1"></i> ด้านกิจกรรม[cite: 1]
+                </button>
+                <button class="tab-btn bg-white text-slate-600 border border-slate-200 hover:bg-slate-100 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all" data-filter="volunteer">
+                    <i class="fa-solid fa-hand-holding-heart mr-1"></i> ด้านจิตอาสา[cite: 1]
+                </button>
+            </div>
+
+            <!-- Grid Items (Design With Custom Clean Title Cards) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- ITEM 1: Water Rocket KKU -->
+                <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover cursor-pointer" 
+                     data-category="academic"
+                     onclick="openCardModal('ตัวแทนแข่งขันจรวดขวดน้ำ สัปดาห์วิทยาศาสตร์แห่งชาติ', 'ตัวแทนโรงเรียนในการเข้าร่วมการแข่งขันจรวดขวดน้ำ ในงานสัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค ประจำปี 2567 ณ มหาวิทยาลัยขอนแก่น ได้รับประสบการณ์ในการทำงานเป็นทีมและการวางแผนแก้ปัญหาอย่างมีประสิทธิภาพ', 'ด้านวิชาการ')">
+                    <div class="h-44 bg-gradient-to-br from-academic-800 to-academic-900 p-6 flex flex-col justify-between text-white relative">
+                        <span class="self-start bg-academic-700/80 text-academic-100 text-[10px] font-bold px-3 py-1 rounded-full border border-academic-600">
+                            ด้านวิชาการ[cite: 1]
+                        </span>
+                        <div>
+                            <i class="fa-solid fa-rocket text-chemistry-500 text-2xl mb-2 block"></i>
+                            <h4 class="font-bold text-base leading-snug">การแข่งขันจรวดขวดน้ำ</h4>[cite: 1]
+                            <p class="text-xs text-slate-300">ม.ขอนแก่น (2567)</p>[cite: 1]
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-slate-800 text-sm">ตัวแทนโรงเรียนโนนสูงพิทยาคาร</h3>[cite: 1]
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                            เข้าร่วมการแข่งขันจรวดขวดน้ำ มหาวิทยาลัยขอนแก่น ฝึกการวางแผนและการทำงานเป็นทีม[cite: 1]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 2: Science Problem Solving -->
+                <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover cursor-pointer" 
+                     data-category="academic"
+                     onclick="openCardModal('การแข่งขันกระบวนการแก้ปัญหาทางวิทยาศาสตร์', 'เข้าร่วมการแข่งขันกระบวนการแก้ปัญหาทางวิทยาศาสตร์ ระดับมัธยมศึกษาตอนปลาย ในงานสัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค ณ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น', 'ด้านวิชาการ')">
+                    <div class="h-44 bg-gradient-to-br from-academic-800 to-academic-900 p-6 flex flex-col justify-between text-white relative">
+                        <span class="self-start bg-academic-700/80 text-academic-100 text-[10px] font-bold px-3 py-1 rounded-full border border-academic-600">
+                            ด้านวิชาการ[cite: 1]
+                        </span>
+                        <div>
+                            <i class="fa-solid fa-microscope text-chemistry-500 text-2xl mb-2 block"></i>
+                            <h4 class="font-bold text-base leading-snug">กระบวนการแก้ปัญหาทางวิทยาศาสตร์</h4>[cite: 1]
+                            <p class="text-xs text-slate-300">ม.ขอนแก่น (2568)</p>[cite: 1]
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-slate-800 text-sm">การแข่งขันแก้ปัญหาทางวิทย์ มข.</h3>[cite: 1]
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                            เข้าร่วมทดสอบกระบวนการคิดและแก้ปัญหาทางวิทยาศาสตร์ ระดับ ม.ปลาย[cite: 1]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 3: Rainbow Sugar Density Lab -->
+                <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover cursor-pointer" 
+                     data-category="activity"
+                     onclick="openCardModal('กิจกรรมทดลอง ความหนาแน่นของสาร (น้ำหวานสายรุ้ง)', 'เข้าร่วมกิจกรรมการทดลองความฉลาดรู้เฉพาะด้าน (เคมี) หัวข้อ ความหนาแน่นของสาร โดยการสร้างน้ำหวานสายรุ้งซึ่งเป็นการแบ่งชั้นของน้ำหวานตามค่าความหนาแน่นที่แตกต่างกัน', 'ด้านกิจกรรม')">
+                    <div class="h-44 bg-gradient-to-br from-chemistry-600 to-academic-800 p-6 flex flex-col justify-between text-white relative">
+                        <span class="self-start bg-chemistry-700/80 text-white text-[10px] font-bold px-3 py-1 rounded-full border border-chemistry-500">
+                            ด้านกิจกรรม[cite: 1]
+                        </span>
+                        <div>
+                            <i class="fa-solid fa-vial text-amber-300 text-2xl mb-2 block"></i>
+                            <h4 class="font-bold text-base leading-snug">ทดลองความหนาแน่นของสาร</h4>[cite: 1]
+                            <p class="text-xs text-chemistry-100">ปฏิบัติการเคมี (น้ำหวานสายรุ้ง)</p>[cite: 1]
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <h3 class="font-bold text-slate-800 text-sm">ศึกษาความหนาแน่นและสารละลาย</h3>[cite: 1]
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">
+                            สร้างน้ำหวานสายรุ้งเพื่อเรียนรู้ปัจจัยที่มีผลต่อความหนาแน่นและการแยกชั้น[cite: 1]
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ITEM 4: Polymer Teaching -->
+                <div class="portfolio-item bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover cursor-pointer" 
+                     data-category="activity"
+                     onclick="openCardModal('ผู้สอนและถ่ายทอดความรู้ การเกิดปฏิกิริยาพอลิเมอร์', 'ได้รับหน้าที่เป็นผู้สอนและถ่ายทอดความรู้ทางด้าน การเกิดปฏิกิริยาพอลิเมอร์ แก่เพื่อนนักเรียนภายในชั้น โดยใช้สื่อประกอบและกิจกรรมปฏิบัติจริงเพื่อสร้างบรรยากาศการเรียนรู้', 'ด้านกิจกรรม')">
+                    <div class="h-44 bg-gradient-to-br from-chemistry-600 to-academic-800 p-6 flex flex-col justify-between text-white relative">
+                        <span class="self-start bg-chemistry-700/80 text-white text-[10px] font-bold px-3 py-1 rounded-full border border-chemistry-500">
+                            ด้านกิจกรรม[cite: 1]
+                        </span>
+                        <div>
+                            <i class="fa-solid fa-chalkboard-user text-amber-300 text-2xl mb-2 block"></i>
+                            <h4 class="font-bold text-base leading-snug">ผู้สอน "ปฏิกิริยาพอลิเมอร์"</h4>[cite: 1]
+                            <p class="text-xs text-chemistry-100">การถ่ายทอดความรู้ในชั้นเรียน</p>[cite: 1]
+                        </div>
+                    </div>
+                    <div class="p-5 space-y-2
